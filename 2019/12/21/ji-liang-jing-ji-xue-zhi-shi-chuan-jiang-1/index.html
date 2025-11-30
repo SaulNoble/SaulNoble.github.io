@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计量经济学知识串讲(1) | Saul&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="补充一些令人疑惑的概念。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计量经济学知识串讲(1)">
+<meta property="og:url" content="https://saulnoble.github.io/2019/12/21/ji-liang-jing-ji-xue-zhi-shi-chuan-jiang-1/index.html">
+<meta property="og:site_name" content="Saul&#39;s Blog">
+<meta property="og:description" content="补充一些令人疑惑的概念。">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2019/12/21/wKhR6VlcnNkvT97.png">
+<meta property="og:image" content="https://i.loli.net/2019/12/21/Fj4M9ePAJTXzYk8.png">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007DGvPCgy1ga46oyn540j30oi0gdgpp.jpg">
+<meta property="article:published_time" content="2019-12-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-11-30T12:19:04.572Z">
+<meta property="article:author" content="Saul">
+<meta property="article:tag" content="计量经济学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2019/12/21/wKhR6VlcnNkvT97.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Saul's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Saul&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://saulnoble.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ji-liang-jing-ji-xue-zhi-shi-chuan-jiang-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/21/ji-liang-jing-ji-xue-zhi-shi-chuan-jiang-1/" class="article-date">
+  <time class="dt-published" datetime="2019-12-20T16:00:00.000Z" itemprop="datePublished">2019-12-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计量经济学知识串讲(1)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>补充一些令人疑惑的概念。</p>
+<span id="more"></span>
+
+<h2 id="遗漏变量和加进无关变量的模型，对模型的影响分别是什么？"><a href="#遗漏变量和加进无关变量的模型，对模型的影响分别是什么？" class="headerlink" title="遗漏变量和加进无关变量的模型，对模型的影响分别是什么？"></a>遗漏变量和加进无关变量的模型，对模型的影响分别是什么？</h2>
+先下结论：
+
+<p>（1）遗漏模型中本该有的变量，损失的是<strong>无偏性和一致性</strong>；</p>
+<p>（2）加进模型中不应该有的变量，其损失的只有<strong>有效性</strong>。</p>
+<p>  具体解释一下，第一：模型中<strong>遗漏重要解释变量</strong>的不良后果比模型中引入无关解释变量的<strong>后果要严重得多</strong>。遗漏了重要解释变量的模型是一个错误的不可用的模型，而引进了无关解释变量的模型是一个精度不高、但仍具一定利用价值的模型。应力求避免模型对重要解释变量的遗漏，</p>
+<p>第二：虽然在模型引进无关解释变量的不良后果相对较小，但不能认为在模型中包含无关解释变量是可以容忍的。事实上，如果出现这种情况，会造成模型参数估计量精确度下降，还会引发解释变量的<strong>多重共线性</strong>问题，以及造成自由度的损失。</p>
+<h2 id="虚拟变量"><a href="#虚拟变量" class="headerlink" title="虚拟变量"></a>虚拟变量</h2><h4 id="应该引入几个虚拟变量？"><a href="#应该引入几个虚拟变量？" class="headerlink" title="应该引入几个虚拟变量？"></a>应该引入几个虚拟变量？</h4>
+(1) 一个因素多个属性。若定性因素有m 个不同属性或相互排斥的类型，在模型中则只能引入$m-1$ 个虚拟变量，否则会产生**完全多重共线性。**
+<blockquote>
+例子：一年四个季度，引入3个虚拟变量
+</blockquote>
+(2) 多个因素各两种属性。如果有$m$个定性因素，且每个因素各有两个不同的属性类
+型，则引入$m-1$ 个虚拟变量。
+
+<p><strong>一个例子：</strong></p>
+<img src="https://i.loli.net/2019/12/21/wKhR6VlcnNkvT97.png" alt>
+<h3 id="两种设定形式：加法与乘法"><a href="#两种设定形式：加法与乘法" class="headerlink" title="两种设定形式：加法与乘法"></a>两种设定形式：加法与乘法</h3>
+（1）加法类型。
+
+<p>在模型中，将<strong>虚拟解释变量作为新一项</strong>，以达到其调整<strong>截距</strong>的目的，然后比较有无前后虚拟变量<strong>截距的差距</strong>来看虚拟变量的影响&#x2F;</p>
+<hr>
+<img src="https://i.loli.net/2019/12/21/Fj4M9ePAJTXzYk8.png" alt>
+
+<p>（2）乘法类型。</p>
+<p>模型中，将<strong>虚拟解释变量与其他解释变量相乘</strong>，作为新的解释变量出现在模型中，以达到其调整设定模型<strong>斜率系数</strong>的目的。<br>乘法形式引入虚拟解释变量的主要作用在于：</p>
+<p>①两个回归模型之间的比较</p>
+<p><strong>②因素之间的交互影响分析</strong></p>
+<p>③提高模型对现实经济现象的描述精度</p>
+<p><strong>举个例子：</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/007DGvPCgy1ga46oyn540j30oi0gdgpp.jpg" alt="1576492161318.png"></p>
+<h2 id="举出时间序列，截面数据，面板数据的例子"><a href="#举出时间序列，截面数据，面板数据的例子" class="headerlink" title="举出时间序列，截面数据，面板数据的例子"></a>举出时间序列，截面数据，面板数据的例子</h2><h3 id="截面数据："><a href="#截面数据：" class="headerlink" title="截面数据："></a>截面数据：</h3>
+![img](https://qph.fs.quoracdn.net/main-qimg-7beac886a9cd47c5ba4324dfd36dc2f6.webp)
+<h3 id="时间序列："><a href="#时间序列：" class="headerlink" title="时间序列："></a>时间序列：</h3>
+![undefined](http://ww1.sinaimg.cn/large/007DGvPCly1ga2wq0ao7wj30cx03h0sp.jpg)
+<h3 id="面板数据"><a href="#面板数据" class="headerlink" title="面板数据"></a>面板数据</h3>
+![undefined](http://ww1.sinaimg.cn/large/007DGvPCly1ga2wqh7z3xj30cw06v3ys.jpg)
+
+<p>之前在做这个作业的时候我写了不同事物的例子，今天在Quora上看到这个<a href="https://www.quora.com/What-is-the-difference-between-panel-data-time-serial-data-and-cross-sectional-data" target="_blank" rel="noopener">回答</a>，特意搬运过来。深感这样才是<strong>正确举例子的办法</strong>。不光老师，学生应该也要学会这样举例子。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://saulnoble.github.io/2019/12/21/ji-liang-jing-ji-xue-zhi-shi-chuan-jiang-1/" data-id="cuidlhzSiKkqsOSJeHnw3HPQP" data-title="计量经济学知识串讲(1)" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/" rel="tag">计量经济学</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/22/li-yong-python-ji-suan-shen-fen-zheng-xiao-yan-ma/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          利用python计算身份证校验码
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/19/fu-mu-xin/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">父母心</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E8%AF%B4/">小说</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%9D%E8%80%83/">思考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%A7%82%E5%BD%B1/">观影</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CFA/" rel="tag">CFA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/latex/" rel="tag">latex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86/" rel="tag">回忆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" rel="tag">好物分享</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E8%AF%B4/" rel="tag">小说</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%80%E6%80%9D%E6%89%80%E6%83%B3/" rel="tag">所思所想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%80%E8%A7%81%E6%89%80%E5%BE%97/" rel="tag">所见所得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%80%E8%A7%81%E6%89%80%E6%83%B3/" rel="tag">所见所想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%AA%E5%BD%95/" rel="tag">纪录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/" rel="tag">计量经济学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%87%91%E8%9E%8D%E6%95%B0%E5%AD%A6-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" rel="tag">金融数学 随机过程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CFA/" style="font-size: 10px;">CFA</a> <a href="/tags/latex/" style="font-size: 10px;">latex</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 10px;">回忆</a> <a href="/tags/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" style="font-size: 10px;">好物分享</a> <a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 16.67px;">小说</a> <a href="/tags/%E6%80%9D%E8%80%83/" style="font-size: 13.33px;">思考</a> <a href="/tags/%E6%89%80%E6%80%9D%E6%89%80%E6%83%B3/" style="font-size: 13.33px;">所思所想</a> <a href="/tags/%E6%89%80%E8%A7%81%E6%89%80%E5%BE%97/" style="font-size: 10px;">所见所得</a> <a href="/tags/%E6%89%80%E8%A7%81%E6%89%80%E6%83%B3/" style="font-size: 13.33px;">所见所想</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 10px;">杂谈</a> <a href="/tags/%E7%BA%AA%E5%BD%95/" style="font-size: 10px;">纪录</a> <a href="/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 20px;">计量经济学</a> <a href="/tags/%E9%87%91%E8%9E%8D%E6%95%B0%E5%AD%A6-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" style="font-size: 10px;">金融数学 随机过程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/12/31/wo-yu-zhang-jia-wei/">我与张佳玮</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/29/zhui-hu-die-de-nu-hai/">追蝴蝶的女孩</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/23/yin-xiang-zui-shen-de-ying-shi-ju-tai-ci/">印象最深的影视剧台词</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/14/circumstance-issues/">Circumstance issues</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/28/wo-de-shu-xue-jian-mo-zhi-lu/">我的数学建模之路</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 Saul<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

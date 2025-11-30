@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计量经济学：解读Eviews回归结果（下） | Saul&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="解读Eviews回归结果（下）终于出现了，这次的讲解更贴近于考试使用。 如果你还没有读过上集，可以先观看计量经济学：解读Eviews回归结果（上）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计量经济学：解读Eviews回归结果（下）">
+<meta property="og:url" content="https://saulnoble.github.io/2019/12/24/jie-du-eviews-hui-gui-jie-guo-xia/index.html">
+<meta property="og:site_name" content="Saul&#39;s Blog">
+<meta property="og:description" content="解读Eviews回归结果（下）终于出现了，这次的讲解更贴近于考试使用。 如果你还没有读过上集，可以先观看计量经济学：解读Eviews回归结果（上）">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2019/12/24/Ekho8WtPGNnYpKr.png">
+<meta property="article:published_time" content="2019-12-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-11-30T12:19:04.574Z">
+<meta property="article:author" content="Saul">
+<meta property="article:tag" content="计量经济学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2019/12/24/Ekho8WtPGNnYpKr.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Saul's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Saul&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://saulnoble.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-jie-du-eviews-hui-gui-jie-guo-xia" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/24/jie-du-eviews-hui-gui-jie-guo-xia/" class="article-date">
+  <time class="dt-published" datetime="2019-12-23T16:00:00.000Z" itemprop="datePublished">2019-12-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计量经济学：解读Eviews回归结果（下）
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>解读Eviews回归结果（下）终于出现了，这次的讲解更贴近于考试使用。</p>
+<p>如果你还没有读过上集，可以先观看<a href="https://saulnoble.github.io/2019/12/16/ji-liang-jing-ji-xue-jie-du-eviewwws-hui-gui-jie-guo-shang/">计量经济学：解读Eviews回归结果（上）</a></p>
+<span id="more"></span>
+
+<h1 id="先来看这个表"><a href="#先来看这个表" class="headerlink" title="先来看这个表"></a>先来看这个表</h1>
+![1577188385762.png](https://i.loli.net/2019/12/24/YtQj53qFTNlziOa.png)
+<h3 id="尝试计算空白值"><a href="#尝试计算空白值" class="headerlink" title="尝试计算空白值"></a>尝试计算空白值</h3>
+建议先手动算一下空白值，答案如下。
+
+<p><img src="https://i.loli.net/2019/12/24/Ekho8WtPGNnYpKr.png" alt="2019-12-24-19-30-46-image.png"></p>
+<h3 id="解答中的一些细节"><a href="#解答中的一些细节" class="headerlink" title="解答中的一些细节"></a>解答中的一些细节</h3><ul><li>
+表格中的上半部分的解答很简单，下半部分由$\bar{R^2}$，$n$，$k$，才得以算出。
+</li><li>
+其中这里的$n$就是样本容量（28），$k$是解释变量个数（其他地方和课本不一样，庞浩课本上默认把y也带进去了，所以第三行的公式你也可以写成：
+
+<p>$$R^{2}&#x3D;1-\left(1-\bar{R}^{2}\right) \frac{n-k}{n-1}，k&#x3D;3$$</p>
+</li><li>
+解答第四行：
+
+<p>$$\hat{\sigma}&#x3D;\sqrt{\sum e_{i}^{2} &#x2F;(n-k-1)}$$</p>
+<p>这里有两个地方值得注意，首先$S.E \space of  \space  regression$n是标准差，是要开方的，<strong>很容易忘记开方</strong>。其次在一元回归中：</p>
+<p>$$\hat{\sigma}&#x3D;\sqrt{\frac{\sum e_{i}^{2}} {n-2}}$$</p>
+</li><li>
+在这里却变成了
+
+<p>$$\hat{\sigma}&#x3D;\sqrt{\frac{\sum e_{i}^{2}} {n-k-1}}$$</p>
+</li></ul>
+因为一元线性回归是一个特例，$k=1$的特例，在计算多元线性回归的$S.E \space of  \space  regression$时，需注意使用通用的形式。
+<h3 id="但是如果题目没有给-bar-R-2-，那么应该如何算R-2呢？"><a href="#但是如果题目没有给-bar-R-2-，那么应该如何算R-2呢？" class="headerlink" title="但是如果题目没有给$\bar{R^2}$，那么应该如何算R^2呢？"></a>但是如果题目没有给$\bar{R^2}$，那么应该如何算R^2呢？</h3><ul><li>我们可以利用如下的公式计算。</li></ul>
+$$(S.D \ dependent \ var)^2\cdot(n-1)=TSS$$
+<ul><li>再利用</li></ul>
+$$R^2=\frac{ESS}{TSS}=\frac{1-RSS}{TSS}$$
+
+<p>来计算$R^2$</p>
+<p><strong>值得注意的是：</strong></p>
+<blockquote><ul><li>有时候​算出来会有误差，因为题目数字小数位数太少，​给的不够精确。</li><li>题目小数点够多（比如本题），或者数字足够大，就可以放心用。</li></ul></blockquote>
+现在，你可以尝试用这种方法重新计算一下本题，还挺方便的。
+<h1 id="再来看这个表"><a href="#再来看这个表" class="headerlink" title="再来看这个表"></a>再来看这个表</h1>
+![2019-12-24-19-40-44-image.png](https://i.loli.net/2019/12/24/vL1tEAiPDqaFru2.png)
+
+<p>这是一个white检验，用来检验是否存在异方差，我们可以观察Obs R-squared 的显著情况来观察是否有异方差。</p>
+<ul><li>p-value>0.1,显然不显著</li></ul>
+所以并没有异方差。
+<h1 id="再再来看这个表"><a href="#再再来看这个表" class="headerlink" title="再再来看这个表"></a>再再来看这个表</h1>
+![2019-12-24-19-44-11-image.png](https://i.loli.net/2019/12/24/I9V7YEdfJxtULmp.png)
+
+<p>所谓<strong>多重共线性</strong>，就是模型中含有的变量高度相关，事实上加进去跟没加一样（因为另一个变量足够解释模型了）。</p>
+<p>所以我们新做一个模型，用$x_{1}$做因变量，$x_{2}$做自变量，看这个回归啊显著，显著了，就说明高度线性相关，有多重共线性。</p>
+<p>那么很明显，$x_{2}$的 $p-value$不高，所以无多重共线性</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://saulnoble.github.io/2019/12/24/jie-du-eviews-hui-gui-jie-guo-xia/" data-id="cuidREn2P98wgVWtT6AiSf2lU" data-title="计量经济学：解读Eviews回归结果（下）" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/" rel="tag">计量经济学</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/04/reng-diao-you-se-yan-jing/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          扔掉有色眼镜
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/22/ji-liang-jing-ji-xue-zhong-ji-ge-chang-jian-de-zheng-ming/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">计量经济学中几个常见的证明</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E8%AF%B4/">小说</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%9D%E8%80%83/">思考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%A7%82%E5%BD%B1/">观影</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CFA/" rel="tag">CFA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/latex/" rel="tag">latex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86/" rel="tag">回忆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" rel="tag">好物分享</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E8%AF%B4/" rel="tag">小说</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%80%E6%80%9D%E6%89%80%E6%83%B3/" rel="tag">所思所想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%80%E8%A7%81%E6%89%80%E5%BE%97/" rel="tag">所见所得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%80%E8%A7%81%E6%89%80%E6%83%B3/" rel="tag">所见所想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%AA%E5%BD%95/" rel="tag">纪录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/" rel="tag">计量经济学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%87%91%E8%9E%8D%E6%95%B0%E5%AD%A6-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" rel="tag">金融数学 随机过程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CFA/" style="font-size: 10px;">CFA</a> <a href="/tags/latex/" style="font-size: 10px;">latex</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 10px;">回忆</a> <a href="/tags/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" style="font-size: 10px;">好物分享</a> <a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 16.67px;">小说</a> <a href="/tags/%E6%80%9D%E8%80%83/" style="font-size: 13.33px;">思考</a> <a href="/tags/%E6%89%80%E6%80%9D%E6%89%80%E6%83%B3/" style="font-size: 13.33px;">所思所想</a> <a href="/tags/%E6%89%80%E8%A7%81%E6%89%80%E5%BE%97/" style="font-size: 10px;">所见所得</a> <a href="/tags/%E6%89%80%E8%A7%81%E6%89%80%E6%83%B3/" style="font-size: 13.33px;">所见所想</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 10px;">杂谈</a> <a href="/tags/%E7%BA%AA%E5%BD%95/" style="font-size: 10px;">纪录</a> <a href="/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 20px;">计量经济学</a> <a href="/tags/%E9%87%91%E8%9E%8D%E6%95%B0%E5%AD%A6-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" style="font-size: 10px;">金融数学 随机过程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/12/31/wo-yu-zhang-jia-wei/">我与张佳玮</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/29/zhui-hu-die-de-nu-hai/">追蝴蝶的女孩</a>
+          </li>
+        
+          <li>
+            <a href="/2021/07/23/yin-xiang-zui-shen-de-ying-shi-ju-tai-ci/">印象最深的影视剧台词</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/14/circumstance-issues/">Circumstance issues</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/28/wo-de-shu-xue-jian-mo-zhi-lu/">我的数学建模之路</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 Saul<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
