@@ -1,0 +1,147 @@
+/* 归档页面时间轴样式 */
+.archive-article {
+    position: relative;
+    margin-left: 30px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    border-left: 2px solid #42b983;
+}
+
+.archive-article::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #42b983;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 3px #42b98330;
+}
+
+.archive-article:hover::before {
+    background: #ff6b6b;
+    box-shadow: 0 0 0 3px #ff6b6b30;
+    transition: all 0.3s ease;
+}
+
+/* 年份标题样式 */
+.archives-wrap .archive-year-wrap {
+    margin: 40px 0 20px 0;
+}
+
+.archives .year {
+    font-size: 2em;
+    font-weight: bold;
+    color: #42b983;
+    margin-left: 0;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #42b98320 0%, transparent 100%);
+    border-left: 5px solid #42b983;
+}
+
+/* 文章标题悬停效果 */
+.archive-article-title {
+    transition: all 0.3s ease;
+}
+
+.archive-article-title:hover {
+    color: #42b983 !important;
+    transform: translateX(5px);
+}
+
+/* 日期样式 */
+.archive-article-date {
+    color: #999;
+    font-size: 0.95em;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .archive-article {
+        margin-left: 15px;
+        padding-left: 25px;
+    }
+
+    .archives .year {
+        font-size: 1.5em;
+    }
+}
+
+/* 侧边栏时间轴小工具样式 */
+.timeline-widget {
+    font-size: 0.9em;
+}
+
+.timeline-year {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #42b983;
+    margin: 15px 0 8px 0;
+    padding: 5px 10px;
+    background: linear-gradient(90deg, #42b98320 0%, transparent 100%);
+    border-left: 3px solid #42b983;
+}
+
+.timeline-month {
+    font-size: 0.95em;
+    color: #666;
+    margin: 10px 0 5px 10px;
+    font-weight: 600;
+}
+
+.timeline-list {
+    list-style: none;
+    margin: 0 0 0 15px;
+    padding: 0;
+    border-left: 2px solid #e0e0e0;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 5px 0 5px 20px;
+    margin: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -5px;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #42b983;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #e0e0e0;
+}
+
+.timeline-item:hover .timeline-dot {
+    background: #ff6b6b;
+    box-shadow: 0 0 0 2px #ff6b6b50;
+    transition: all 0.3s ease;
+}
+
+.timeline-item a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    line-height: 1.6;
+}
+
+.timeline-item a:hover {
+    color: #42b983;
+}
+
+/* 调整背景图片显示 */
+#banner {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-color: #000 !important;
+}
+
+#header {
+    height: 500px !important;
+}
