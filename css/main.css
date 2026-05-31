@@ -166,75 +166,72 @@ img {
   padding: clamp(28px, 5vw, 62px);
 }
 
-.hero-topic-grid {
+.hero-image-grid {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 10px;
+  padding: 10px;
   border-left: 1px solid var(--line);
 }
 
-.hero-topic {
+.hero-image-panel {
   position: relative;
-  display: grid;
-  align-content: end;
   min-height: 0;
   overflow: hidden;
-  padding: clamp(22px, 4vw, 34px);
-  border-bottom: 1px solid var(--line);
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
 }
 
-.hero-topic:last-child {
-  border-bottom: 0;
-}
-
-.hero-topic::before {
+.hero-image-panel::after {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(135deg, currentColor, transparent 32%);
-  opacity: 0.1;
+  background:
+    linear-gradient(180deg, transparent 45%, rgba(5, 8, 18, 0.54)),
+    linear-gradient(120deg, rgba(69, 214, 255, 0.14), transparent 42%, rgba(245, 196, 91, 0.12));
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 
-.hero-topic::after {
-  position: absolute;
-  right: 22px;
-  bottom: 18px;
-  width: 42%;
-  height: 2px;
-  content: "";
-  background: currentColor;
-  opacity: 0.32;
+.hero-image-panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  filter: saturate(1.08) contrast(1.04);
 }
 
-.hero-topic-bitcoin {
-  color: var(--accent-warm);
+.hero-image-bitcoin {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-.hero-topic-wemby {
-  color: var(--accent-green);
+.hero-image-bitcoin img {
+  object-position: center;
 }
 
-.hero-topic-nolan {
-  color: var(--accent-hot);
+.hero-image-wembanyama {
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
-.hero-topic .eyebrow,
-.hero-topic h2,
-.hero-topic p {
-  position: relative;
-  z-index: 1;
+.hero-image-wembanyama img {
+  object-position: center 20%;
 }
 
-.hero-topic h2 {
-  color: var(--text);
-  font-size: clamp(1.7rem, 3vw, 2.8rem);
+.hero-image-nolan {
+  grid-column: 1;
+  grid-row: 2;
 }
 
-.hero-topic p:not(.eyebrow) {
-  max-width: 22rem;
-  margin: 12px 0 0;
-  color: var(--muted);
+.hero-image-nolan img {
+  object-position: center 38%;
 }
 
 .eyebrow {
@@ -316,17 +313,6 @@ h3 {
   max-width: 62ch;
   margin: 0;
   color: var(--muted);
-}
-
-.topic-mark {
-  position: absolute;
-  right: 18px;
-  top: 16px;
-  color: currentColor;
-  font-size: clamp(3.8rem, 8vw, 6rem);
-  font-weight: 800;
-  line-height: 1;
-  opacity: 0.18;
 }
 
 .post-list {
@@ -706,11 +692,29 @@ h3 {
     min-height: 560px;
   }
 
-  .hero-topic-grid {
-    grid-template-rows: none;
+  .hero-image-grid {
+    grid-template-rows: 170px 210px 170px;
     grid-template-columns: 1fr;
     border-top: 1px solid var(--line);
     border-left: 0;
+  }
+
+  .hero-image-bitcoin,
+  .hero-image-wembanyama,
+  .hero-image-nolan {
+    grid-column: 1;
+  }
+
+  .hero-image-bitcoin {
+    grid-row: 1;
+  }
+
+  .hero-image-wembanyama {
+    grid-row: 2;
+  }
+
+  .hero-image-nolan {
+    grid-row: 3;
   }
 
   .post-list,
