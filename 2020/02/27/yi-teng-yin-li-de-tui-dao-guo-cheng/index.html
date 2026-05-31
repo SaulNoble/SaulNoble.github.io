@@ -7,6 +7,23 @@
   <title>伊藤引理的推导过程 / Blog de Saul</title>
   <meta name="description" content="Saul Noble 的个人札记、旧文与记忆档案">
   <link rel="stylesheet" href="/css/main.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body>
   <div class="site-shell">
@@ -43,7 +60,7 @@
 
 
   </header>
-  <div class="post-body">
+  <div class="post-body typography-prose">
     <p>伊藤引理帮助求解随机过程下函数的微分，其数学推导比较复杂。<br>应用于金融数学中的随机过程，尤其是BHM公式的推导。</p>
 <p>在学习之前，我们需要回顾两个知识:<strong>泰勒公式与随机过程</strong>。</p>
 <h1 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h1><p>在高数课本中，我们知道 $$ \underbrace{f(s+d s)&#x3D;f(s)}+f^{\prime}(s) d s+\frac{1}{2} f^{\prime \prime}(s)(d s)^{2}+… $$ 将花括号的部分进行移项、相减，就得到： $$ d_f&#x3D;f^{\prime}(s) d s+\frac{1}{2} f^{\prime \prime}(s)(d s)^{2}+… $$ 这是一元下的情况。</p>

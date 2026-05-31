@@ -7,6 +7,23 @@
   <title>latex教学 / Blog de Saul</title>
   <meta name="description" content="Saul Noble 的个人札记、旧文与记忆档案">
   <link rel="stylesheet" href="/css/main.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body>
   <div class="site-shell">
@@ -43,7 +60,7 @@
 
 
   </header>
-  <div class="post-body">
+  <div class="post-body typography-prose">
     <p>LateX作为常用的排版输入数学公式的工具，可以帮助提高效率。这个文档能帮助你快速解决一些问题。</p>
 <h1 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h1><p>在开始简单的学习之前，几条如下的法则可以帮助你减少一些弯路。</p>
 <p><strong>第一：</strong></p>

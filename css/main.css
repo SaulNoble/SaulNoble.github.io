@@ -507,45 +507,260 @@ h3 {
 }
 
 .post-body {
-  width: min(760px, 100%);
-  margin: 28px auto 0;
-  color: #e7e0d2;
-  font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
-  font-size: 1.08rem;
+  width: min(820px, 100%);
+  margin: clamp(28px, 5vw, 48px) auto 0;
+  color: #ece5d6;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, Georgia, "Times New Roman", serif;
+  font-size: clamp(1.06rem, 0.5vw + 0.98rem, 1.18rem);
+  line-height: 1.92;
+}
+
+.typography-prose {
+  padding: clamp(26px, 5vw, 54px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 160px),
+    linear-gradient(90deg, rgba(69, 214, 255, 0.08), transparent 42%, rgba(245, 196, 91, 0.06)),
+    rgba(12, 14, 19, 0.72);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.24);
+}
+
+.post-body > *:first-child {
+  margin-top: 0;
+}
+
+.post-body > *:last-child {
+  margin-bottom: 0;
 }
 
 .post-body h2,
-.post-body h3 {
-  margin-top: 2.2em;
-  margin-bottom: 0.7em;
+.post-body h3,
+.post-body h4 {
+  position: relative;
+  margin-top: 2.35em;
+  margin-bottom: 0.75em;
+  color: var(--text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.post-body h2 {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: clamp(1.65rem, 2vw, 2.35rem);
+}
+
+.post-body h2::before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 86px;
+  height: 3px;
+  content: "";
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+}
+
+.post-body h3 {
+  font-size: clamp(1.32rem, 1.35vw, 1.72rem);
+}
+
+.post-body h4 {
+  color: var(--accent-warm);
+  font-size: 1.08rem;
+  text-transform: uppercase;
 }
 
 .post-body p,
 .post-body ul,
 .post-body ol,
-.post-body blockquote {
-  margin: 0 0 1.2em;
+.post-body blockquote,
+.post-body table,
+.post-body figure,
+.post-body .highlight,
+.post-body pre {
+  margin: 0 0 1.35em;
+}
+
+.post-body p {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.post-body strong {
+  color: #fff7df;
+  font-weight: 850;
 }
 
 .post-body a {
-  color: var(--accent);
-  border-bottom: 1px solid rgba(69, 214, 255, 0.35);
+  color: #73e2ff;
+  border-bottom: 1px solid rgba(115, 226, 255, 0.38);
+  background: linear-gradient(180deg, transparent 60%, rgba(69, 214, 255, 0.14) 0);
+}
+
+.post-body a:hover {
+  color: #fff0b8;
+  border-color: rgba(245, 196, 91, 0.55);
+}
+
+.post-body ul,
+.post-body ol {
+  padding-left: 1.45em;
+}
+
+.post-body li {
+  margin-bottom: 0.55em;
+  padding-left: 0.15em;
+}
+
+.post-body li::marker {
+  color: var(--accent-warm);
+  font-weight: 800;
 }
 
 .post-body blockquote {
-  padding: 18px 20px;
-  border-left: 3px solid var(--accent-warm);
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 0 8px 8px 0;
+  position: relative;
+  padding: 22px 24px 22px 58px;
+  border: 1px solid rgba(245, 196, 91, 0.22);
+  border-left: 4px solid var(--accent-warm);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(245, 196, 91, 0.12), transparent 42%),
+    rgba(255, 255, 255, 0.055);
+  color: #f2ead8;
+}
+
+.post-body blockquote::before {
+  position: absolute;
+  left: 18px;
+  top: 10px;
+  color: rgba(245, 196, 91, 0.52);
+  content: "\201C";
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.post-body code:not(pre code) {
+  padding: 0.12em 0.42em;
+  border: 1px solid rgba(69, 214, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(69, 214, 255, 0.1);
+  color: #bdf1ff;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.86em;
+}
+
+.post-body pre,
+.post-body .highlight {
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent),
+    #07090d;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .post-body pre {
-  overflow: auto;
-  padding: 18px;
-  border: 1px solid var(--line);
+  padding: 20px;
+}
+
+.post-body .highlight {
+  padding: 0;
+}
+
+.post-body .highlight table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+
+.post-body .highlight td {
+  border: 0;
+}
+
+.post-body .highlight pre {
+  margin: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.post-body .gutter {
+  width: 1%;
+  color: rgba(236, 229, 214, 0.36);
+  user-select: none;
+}
+
+.post-body .code {
+  color: #d7e8ff;
+}
+
+.post-body table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-collapse: collapse;
   border-radius: 8px;
-  background: #08090b;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.post-body th,
+.post-body td {
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  vertical-align: top;
+}
+
+.post-body th {
+  background: rgba(69, 214, 255, 0.1);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+.post-body img {
+  display: block;
+  max-width: min(100%, 980px);
+  height: auto;
+  margin: 2rem auto;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 18px 56px rgba(0, 0, 0, 0.32);
+}
+
+.post-body hr {
+  height: 1px;
+  margin: 2.6em 0;
+  border: 0;
+  background: linear-gradient(90deg, transparent, rgba(69, 214, 255, 0.5), rgba(245, 196, 91, 0.45), transparent);
+}
+
+.post-body .MathJax,
+.post-body mjx-container {
+  color: #fff2c6;
+  font-size: 1.02em;
+}
+
+.post-body mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 1.6em 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(245, 196, 91, 0.2);
+  border-radius: 8px;
+  background:
+    linear-gradient(120deg, rgba(245, 196, 91, 0.11), transparent 48%),
+    rgba(255, 255, 255, 0.045);
+}
+
+.post-body mjx-container:not([display="true"]) {
+  padding: 0 0.1em;
 }
 
 .archive-list {

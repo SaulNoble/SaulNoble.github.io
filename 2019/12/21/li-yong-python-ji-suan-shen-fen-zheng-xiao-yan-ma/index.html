@@ -7,6 +7,23 @@
   <title>利用python计算身份证校验码 / Blog de Saul</title>
   <meta name="description" content="Saul Noble 的个人札记、旧文与记忆档案">
   <link rel="stylesheet" href="/css/main.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body>
   <div class="site-shell">
@@ -43,7 +60,7 @@
 
 
   </header>
-  <div class="post-body">
+  <div class="post-body typography-prose">
     <p>传统的身份证一共18位，其中最后一位是验证码。</p>
 <p>首先，前六位是地区码，中间八位是生日，再三位可以理解是是出生顺序码+男女编码。</p>
 <p><img src="http://ww1.sinaimg.cn/large/007DGvPCly1ga5pajx4cuj30n40aswh1.jpg" alt="undefined"></p>

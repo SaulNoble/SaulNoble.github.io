@@ -7,6 +7,23 @@
   <title>计量经济学知识串讲(1) / Blog de Saul</title>
   <meta name="description" content="Saul Noble 的个人札记、旧文与记忆档案">
   <link rel="stylesheet" href="/css/main.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body>
   <div class="site-shell">
@@ -43,7 +60,7 @@
 
 
   </header>
-  <div class="post-body">
+  <div class="post-body typography-prose">
     <p>补充一些令人疑惑的概念。</p>
 <h2 id="遗漏变量和加进无关变量的模型，对模型的影响分别是什么？"><a href="#遗漏变量和加进无关变量的模型，对模型的影响分别是什么？" class="headerlink" title="遗漏变量和加进无关变量的模型，对模型的影响分别是什么？"></a>遗漏变量和加进无关变量的模型，对模型的影响分别是什么？</h2><p>先下结论：</p>
 <p>（1）遗漏模型中本该有的变量，损失的是<strong>无偏性和一致性</strong>；</p>
